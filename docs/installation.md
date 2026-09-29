@@ -1,4 +1,4 @@
-# Installation instructions
+# Installation
 
 `nwm-gdrom` requires Python 3.12 or newer. The runtime dependencies are `numpy >= 2` and
 `pandas >= 2`; no geospatial libraries are needed for the catalog build and consumption
@@ -79,9 +79,9 @@ catalog.
 
 The catalog build itself is modest:
 
-| Resource | Requirement                                                                                                                                                     |
-| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Disk     | ~750 MB free for the GDROM v2 download, ~25 MB for the source layout, ~2 MB for the output catalog.                                                             |
-| Memory   | Peak ~250 MB during build. The catalog resident size is ~23 MB.                                                                                                 |
-| Network  | One-time ~740 MB download from HydroShare. Skippable if you already have the source archive locally (see [CLI reference](docs/cli.md#source-resolution-order)). |
-| Time     | About 15 seconds for the parse, threshold-computation, and pack steps once the source layout is on disk. The HydroShare download dominates wall time.           |
+| Resource | Requirement                                                                                                                                                |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Disk     | ~750 MB free for the GDROM v2 download, ~25 MB for the source layout, ~2 MB for the output catalog.                                                        |
+| Memory   | Peak ~250 MB during build. The catalog resident size is ~23 MB.                                                                                            |
+| Network  | One-time ~740 MB download from HydroShare. Skippable if you already have the source archive locally (see [CLI reference](cli.md#source-resolution-order)). |
+| Time     | About 15 seconds for the parse, threshold-computation, and pack steps once the source layout is on disk. The HydroShare download dominates wall time.      |

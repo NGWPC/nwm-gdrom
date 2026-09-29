@@ -1,0 +1,34 @@
+name: Docs
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - '**'
+  workflow_dispatch:
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build (strict)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+    - uses: prefix-dev/setup-pixi@v0.10.2
+      with:
+        pixi-version: v0.81.0
+        environments: docs
+        activate-environment: docs
+        locked: true
+    - name: Build site
+      run: pixi run -e docs docs-build

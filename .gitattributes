@@ -1,1 +1,7 @@
-/CHANGELOG.md merge=union
+# reduce the number of merge conflicts
+CHANGELOG.md merge=union
+# GitHub syntax highlighting
+pixi.lock linguist-language=YAML linguist-generated=true
+# Upstream GDROM v2 fixtures: keep byte-identical to the HydroShare release.
+# Treat as binary so git does no line-ending normalization on checkout.
+tests/data/** -text

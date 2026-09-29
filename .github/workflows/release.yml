@@ -1,0 +1,117 @@
+name: Publish
+
+on:
+  push:
+    tags:
+    - v*
+  workflow_dispatch: # allows you to trigger manually
+
+permissions:
+  contents: write
+  attestations: write
+  id-token: write
+
+jobs:
+  release-notes:
+    name: Generate release notes
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+
+    - name: Generate release notes with git-cliff
+      uses: orhun/git-cliff-action@v4
+      with:
+        config: pyproject.toml
+        args: --latest --strip all
+      env:
+        OUTPUT: release-notes.md
+        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v3
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        body_path: release-notes.md
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-package:
+    name: Build Python wheel + sdist (attached to GitHub Release)
+    runs-on: ubuntu-latest
+    needs: release-notes
+    steps:
+    - uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+
+    - uses: hynek/build-and-inspect-python-package@v3.0.1
+      with:
+        attest-build-provenance-github: true
+
+    - name: Download built packages
+      uses: actions/download-artifact@v8
+      with:
+        name: Packages
+        path: dist
+
+    - name: Attach wheel + sdist to GitHub Release
+      uses: softprops/action-gh-release@v3
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          dist/*.whl
+          dist/*.tar.gz
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-catalog-artifact:
+    name: Build .npz catalog and attach to GitHub Release
+    runs-on: ubuntu-latest
+    needs: release-notes
+    steps:
+    - uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+
+    - uses: prefix-dev/setup-pixi@v0.10.2
+      with:
+        pixi-version: v0.81.0
+        environments: release
+        activate-environment: release
+        locked: true
+
+    # The CLI downloads the GDROM v2 bag directly from Hydroshare using the
+    # default DOI (10.4211/hs.5293674cb83b4ec698db0eb4777467b8, ~705 MB) and
+    # writes the catalog. To pin a different revision, override
+    # --hydroshare-doi.
+    - name: Download Hydroshare bag and build catalog .npz
+      run: |
+        pixi run -e release nwm-gdrom \
+          --source-dir data \
+          --out dist/nwm_gdrom_catalog.npz \
+          --rule-version "${GITHUB_REF_NAME}" \
+          --crosswalk-version none
+
+    - name: Attest catalog provenance
+      uses: actions/attest-build-provenance@v4
+      with:
+        subject-path: dist/nwm_gdrom_catalog.npz
+
+    - name: Compute SHA256 sidecar
+      run: |
+        cd dist
+        shasum -a 256 nwm_gdrom_catalog.npz > nwm_gdrom_catalog.npz.sha256
+        cat nwm_gdrom_catalog.npz.sha256
+
+    - name: Attach .npz to GitHub Release
+      uses: softprops/action-gh-release@v3
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          dist/nwm_gdrom_catalog.npz
+          dist/nwm_gdrom_catalog.npz.sha256
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

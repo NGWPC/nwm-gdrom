@@ -1,0 +1,60 @@
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) and (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) and (Inflow > nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) and (Inflow <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) and (Inflow > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) and (Inflow > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage > nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Storage > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) and (Storage <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Storage <= nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow <= nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage <= nan) and (Inflow > nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Inflow <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Inflow <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow <= nan) and (Storage > nan) and (Inflow > nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow > nan) and (Storage <= nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow > nan) and (Storage <= nan) and (Storage > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow > nan) and (Storage > nan) and (Inflow <= nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow > nan) and (Storage > nan) and (Inflow <= nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow <= nan) and (Inflow > nan) and (Storage > nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Storage <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) and (Storage > nan) and (Inflow > nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow <= nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) and (Inflow > nan) then Release: nan
+if (Inflow > nan) and (Inflow <= nan) then Release: nan
+if (Inflow > nan) and (Inflow > nan) then Release: nan
